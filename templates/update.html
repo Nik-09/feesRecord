@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block title %}
+    Update
+{% endblock %}
+{% block main %}
+    <form action="/update" method="post">
+        <input type="text" placeholder="Name">
+        <input type="submit">
+    </form>
+{% endblock %}

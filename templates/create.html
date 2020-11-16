@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}
+    Create
+{% endblock %}
+{% block main %}
+    <form action="/create" method="post">
+        <input type="text" placeholder="Name" name="name">
+        <input type="number" placeholder="Class" name="class">
+        <input type="number" placeholder="Fees" name="fees">
+        <input type="month" name="month">
+        <input type="month" name="cleared">
+        <input type="submit">
+    </form>
+{% endblock %}
