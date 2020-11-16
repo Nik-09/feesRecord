@@ -34,8 +34,7 @@ def create():
         month = request.form.get("month")
         cleared = request.form.get("cleared")
 
-        print(name)
-        print(std, fees, month, cleared)
+        db.execute("insert into record ('name' , 'class', 'fees', 'month', 'cleared') values (?,?,?,?,?)", name, std, fees, month, cleared)
         return "ac"
 
 @app.route("/update", methods=["GET", "POST"])
