@@ -2,9 +2,15 @@
 {% block title %}
     Update
 {% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="../static/styles/update.css">
+{% endblock %}
 {% block main %}
-    <form action="/update" method="post">
-        <input type="text" placeholder="Name">
-        <input type="submit">
-    </form>
+    <h1>Update Student Record</h1>
+    <button id="name">Update Name</button>
+    <button id="class">Update Class</button>
+    <button id="fees">Update Fees</button>
+    <button id="del">Delete this Record</button>
+
+    <div id="nik">Hello</div>
 {% endblock %}
