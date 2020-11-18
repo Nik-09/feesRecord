@@ -3,14 +3,53 @@
     Update
 {% endblock %}
 {% block css %}
-    <link rel="stylesheet" href="../static/styles/update.css">
+    <style>
+        body{
+            background-color: blue;
+        }
+        #nameinp, #classinp, #feesinp, #delinp, #submit{ 
+            display: none;
+        }
+    </style>
+    <script>
+        function namefun()
+        {
+            console.log("hi")
+            document.querySelector('#nameinp').style.display = "inline";
+            document.querySelector('#submit').style.display = "inline";
+        }
+        function classfun()
+        {
+            console.log("hi")
+            document.querySelector('#classinp').style.display = "inline";
+            document.querySelector('#submit').style.display = "inline";
+        }
+        function feesfun()
+        {
+            console.log("hi")
+            document.querySelector('#feesinp').style.display = "inline";
+            document.querySelector('#submit').style.display = "inline";
+        }
+        function delfun()
+        {
+            console.log("hi")
+            document.querySelector('#delinp').style.display = "inline";
+            document.querySelector('#submit').style.display = "inline";
+        }
+    </script>
 {% endblock %}
 {% block main %}
     <h1>Update Student Record</h1>
-    <button id="name">Update Name</button>
-    <button id="class">Update Class</button>
-    <button id="fees">Update Fees</button>
-    <button id="del">Delete this Record</button>
+    <button id="name" onclick="namefun()">Update Name</button>
+    <button id="class" onclick="classfun()">Update Class</button>
+    <button id="fees" onclick="feesfun()">Update Fees</button>
+    <button id="del" onclick="delfun()">Delete this Record</button><br/>
 
-    <div id="nik">Hello</div>
+    <form method="POST" action="/update">
+        <input id="nameinp" type="text" placeholder="Change Name">
+        <input id="classinp" type="number" placeholder="Change Class">
+        <input id="feesinp" type="number" placeholder="Change fees">
+        <input id="delinp" type="text" placeholder="Type Name to delete">
+        <input type="submit" id="submit">
+    </form>
 {% endblock %}
